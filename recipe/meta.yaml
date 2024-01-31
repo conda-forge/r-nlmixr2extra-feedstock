@@ -1,4 +1,4 @@
-{% set version = '2.0.8' %}
+{% set version = "2.0.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/nlmixr2extra_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/nlmixr2extra/nlmixr2extra_{{ version }}.tar.gz
-  sha256: cd05d39c3877d32910d4b81aadb8908f86a936f593403558228f1a09399eabeb
+  sha256: 858dcfedd11676c944934255528828ed67c8726736e67ca82c74ab0f2e4a9194
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -88,13 +88,8 @@ about:
   home: https://nlmixr2.github.io/nlmixr2extra/
   dev_url: https://github.com/nlmixr2/nlmixr2extra/
   license: GPL-3.0-or-later
-  summary: Fit and compare nonlinear mixed-effects models in differential equations with flexible
-    dosing information commonly seen in pharmacokinetics and pharmacodynamics (Almquist,
-    Leander, and Jirstrand 2015 <doi:10.1007/s10928-015-9409-1>). Differential equation
-    solving is by compiled C code provided in the 'rxode2' package (Wang, Hallow, and
-    James 2015 <doi:10.1002/psp4.12052>). This package is for support functions like
-    preconditioned fits <doi:10.1208/s12248-016-9866-5>, boostrap and stepwise covariate
-    selection.
+  summary: Fit and compare nonlinear mixed-effects models in differential equations with flexible dosing information commonly seen in pharmacokinetics and pharmacodynamics (Almquist, Leander, and Jirstrand 2015 <doi:10.1007/s10928-015-9409-1>). Differential equation solving is by compiled C code provided in the 'rxode2'
+    package (Wang, Hallow, and James 2015 <doi:10.1002/psp4.12052>). This package is for support functions like preconditioned fits <doi:10.1208/s12248-016-9866-5>, boostrap and stepwise covariate selection.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
