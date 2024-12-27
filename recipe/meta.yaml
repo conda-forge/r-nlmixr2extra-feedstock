@@ -1,6 +1,5 @@
 {% set version = "2.0.10" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-nlmixr2extra
@@ -13,8 +12,7 @@ source:
   sha256: b4ab88db7520d9d4543e714fb35d47e94fd17d3716a8f72ca2eb616cb671680e
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -38,7 +36,7 @@ requirements:
     - {{ posix }}autoconf
     - {{ posix }}automake          # [not win]
     - {{ posix }}automake-wrapper  # [win]
-    - {{ posix }}pkg-config
+    - pkg-config
     - {{ posix }}make
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
@@ -64,8 +62,7 @@ requirements:
     - liblapack
   run:
     - r-base
-    - {{ native }}gcc-libs           # [win]
-    - {{ native }}libwinpthread-git  # [win]
+    - libwinpthread-git  # [win]
     - r-rcpp
     - r-rcpparmadillo
     - r-checkmate
