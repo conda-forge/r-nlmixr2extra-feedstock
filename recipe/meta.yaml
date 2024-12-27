@@ -1,4 +1,4 @@
-{% set version = "2.0.10" %}
+{% set version = "3.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -12,7 +12,7 @@ source:
   sha256: b4ab88db7520d9d4543e714fb35d47e94fd17d3716a8f72ca2eb616cb671680e
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -62,7 +62,6 @@ requirements:
     - liblapack
   run:
     - r-base
-    - libwinpthread-git  # [win]
     - r-rcpp
     - r-rcpparmadillo
     - r-checkmate
