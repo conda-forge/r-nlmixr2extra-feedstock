@@ -51,6 +51,7 @@ requirements:
     - r-crayon
     - r-data.table
     - r-digest
+    - r-dplyr
     - r-ggplot2
     - r-ggtext
     - r-lotri
@@ -69,6 +70,7 @@ requirements:
     - r-crayon
     - r-data.table
     - r-digest
+    - r-dplyr
     - r-ggplot2
     - r-ggtext
     - r-lotri
